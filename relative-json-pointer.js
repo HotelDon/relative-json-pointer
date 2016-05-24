@@ -3,7 +3,7 @@ var RelativeJsonPointer = (function (api) {
 	api.encodeComponent = function encodeComponent(part) {
 		return part.replace(/~/g, '~0').replace(/\//g, '~1');
 	};
-	api.decodeComponent: function decodeComponent(part) {
+	api.decodeComponent = function decodeComponent(part) {
 		return part.replace(/~1/g, '/').replace(/~0/g, '~');
 	};
 	api.resolveAbsolute = function resolveAbsolute(parts, data) {
